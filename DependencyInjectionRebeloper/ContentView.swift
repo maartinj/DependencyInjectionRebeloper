@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject private var coordinator: Coordinator
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button("Detail") {
+                let profile = Profile(name: "Ada")
+                coordinator.push(page: .detail(profile: profile))
+            }
         }
         .padding()
     }

@@ -11,7 +11,7 @@ import SwiftUI
 struct DependencyInjectionRebeloperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoordinatorView()
         }
     }
 }
